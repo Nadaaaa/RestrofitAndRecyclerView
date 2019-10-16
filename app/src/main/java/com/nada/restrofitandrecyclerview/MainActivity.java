@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.nada.restrofitandrecyclerview.models.Ad;
 import com.nada.restrofitandrecyclerview.models.ResponseOfAds;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements AdsAdapter.ListIt
 
     @Override
     public void onListItemClicked(int clickedItemIndex) {
-
+        // To Click on each item in the Recycler View
+        Toast.makeText(getApplicationContext(), adList.get(clickedItemIndex).getName(), Toast.LENGTH_SHORT).show();
     }
 }
